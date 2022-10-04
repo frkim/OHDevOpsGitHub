@@ -72,7 +72,7 @@ jobs:
     needs: docker-build-and-push
     environment:
       name: dev
-      url: https://ohdevopsgh-dev.azurewebsites.net/
+      url: https://oh1devops-dev.azurewebsites.net/
     
     steps:
       - name: 'Login via Azure CLI'
@@ -91,7 +91,7 @@ jobs:
     needs: deploy-to-dev
     environment:
       name: test
-      url: https://ohdevopsgh-test.azurewebsites.net/
+      url: https://oh1devops-test.azurewebsites.net/
     
     steps:
     - uses: actions/checkout@v2
@@ -124,5 +124,5 @@ jobs:
 
     - uses: azure/webapps-deploy@v2
       with:
-        app-name: 'devopsreg-prod'
+        app-name: 'oh1devops-prod'
         images: ${{secrets.ACR_NAME}}/wth/razorcore:${{github.run_number}}
