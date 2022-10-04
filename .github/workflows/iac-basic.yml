@@ -10,7 +10,7 @@ on:
         - test
         - prod
 env:
-  targetEnv: Dev
+  targetEnv: dev
 
 name: Azure ARM
 jobs:
@@ -32,4 +32,4 @@ jobs:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         resourceGroupName: ${{ secrets.AZURE_RG }}
         template: ./Student/Resources/ARM-Templates/container-webapp-template.json
-        parameters: webAppName=oh1devops-${{ env.appenv }}
+        parameters: webAppName=oh1devops-${{ github.event.inputs.appenv }}
