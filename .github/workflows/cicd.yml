@@ -87,7 +87,7 @@ jobs:
 
       - uses: azure/webapps-deploy@v2
         with:
-          app-name: 'devopsreg-dev'
+          app-name: 'oh1devops-dev'
           images: ${{secrets.ACR_NAME}}/wth/razorcore:${{github.run_number}}
 
   deploy-to-test:
@@ -108,7 +108,7 @@ jobs:
 
     - uses: azure/webapps-deploy@v2
       with:
-        app-name: 'devopsreg-test'
+        app-name: 'oh1devops-test'
         images: ${{secrets.ACR_NAME}}/wth/razorcore:${{github.run_number}}
 
   deploy-to-prod:
