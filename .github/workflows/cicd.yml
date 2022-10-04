@@ -90,6 +90,8 @@ jobs:
           app-name: 'oh1devops-dev'
           images: ${{secrets.ACR_NAME}}/wth/razorcore:${{github.run_number}}
 
+
+
   deploy-to-test:
   
     runs-on: ubuntu-latest
