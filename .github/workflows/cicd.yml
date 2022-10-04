@@ -3,7 +3,7 @@ name: CICD
 env:
   registryName: oh1devopsreg.azurecr.io
   repositoryName: wth/razorcore
-  dockerfilePath: ./Student/Resources/Application/src/RazorPagesTestSample
+  dockerFolderPath: ./Student/Resources/Application/src/RazorPagesTestSample
   tag: ${{github.run_number}}
 
 on:
